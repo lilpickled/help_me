@@ -1,0 +1,556 @@
+
+
+body {
+  margin:0;
+  overflow: hidden;
+  font-family: 'PF Videotext Regular';
+}
+
+
+  .open{
+    height: 285px;
+  width: 300px;
+  background-color: #140a05;
+  border-radius: 45%;
+  position: relative;
+  z-index:1;   
+    overflow: hidden;
+    opacity:1;
+animation-duration: .35s;
+  /* animation-iteration-count: 3; */
+  animation-iteration-count: initial;
+  animation-timing-function: linear;
+      animation-fill-mode: forwards; 
+      filter: drop-shadow(2px 15px 10px #273C59); 
+  }
+
+.toothie{
+background-color:#E5EAE8;
+  opacity: 1;
+}
+.tooth{
+    position: absolute;
+  top: 1.5%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+ width: 50px;
+  height: 50px;
+  border:#E5EAE8;
+  border-radius: 100% / 50%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: #E5EAE8;
+   transform: rotate(95deg);
+   z-index: 2;
+  overflow:hidden;
+  
+}
+
+.tooth1{
+    position: absolute;
+  top: 1.5%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+ width: 50px;
+  height: 50px;
+  border:#E5EAE8;
+  border-radius: 100% / 50%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: #E5EAE8;
+   transform: rotate(90deg);
+   z-index: 2;
+  overflow:hidden;
+ 
+}
+
+.tongue{
+      position: absolute;
+  top: 80%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+ width: 220px;
+  height: 190px;
+  border-radius: 100% / 50%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color:#E8A3B1;
+   transform: rotate(270deg);
+   z-index: 2;
+  overflow:hidden;
+  
+}
+
+
+
+  .open:hover {
+    animation-name: example;
+    background-color:  #140a05;   
+        
+  }
+  
+
+
+  .open.shrinking {
+    animation: example 0.3s ease-out forwards;
+  }
+
+
+@keyframes example {
+   
+    from {
+      background-color: #140a05;
+     transform: scale(1,1);
+    width: 300px;
+         height: 285px;
+   
+  }
+
+
+    50% {
+      background-color: #140a05;
+ transform: scale(.50, .30);
+        
+      
+  }
+     to {
+      background-color: #140a05;
+ transform: scale(.15, .02);
+        
+      
+  }
+      
+  }
+
+
+.closed {
+  position: relative;
+    width: 20px;
+  height: 20px;
+  border: 5px solid #140a05;
+  border-radius: 50%;
+  /* Halve the circle */
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  /* Rotate the circle */
+  transform: rotate(225deg);
+  left: -40%;
+}
+
+.closed1{
+   position: absolute;
+    width: 20px;
+  height: 20px;
+  border: 5px solid #140a05;
+  border-radius: 50%;
+  /* Halve the circle */
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+   transform: rotate(45deg);
+  left: 30%;
+}
+
+  .eyes{
+   position: absolute;
+  top:50%;
+  width:100%; 
+   
+    
+}
+
+.eye {
+width: 240px;
+  height: 120px;
+  
+  margin: 35px;
+  border-radius:50%;
+overflow:hidden;
+  position: absolute;
+    top: -10%;
+  left: -1.65%;
+  border-radius: 50%;
+  background-color:  #F9DC5C;
+  position: relative;
+  filter: drop-shadow(0px 2px 8px rgba(14, 15, 53, 0.7));
+}
+  
+
+
+.pupil {
+  width: 65px;
+  height:65px;
+  border-radius: 50%;
+  background-color: #140a05;
+  position: absolute;
+  top: 30%;
+  left:30%;
+  transform: translate(-50%, -50%);
+
+}
+  
+
+  
+  
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #34495e;
+  background-image: url('monsterfur-1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Wrapper to control the size of the content */
+#wrapper {
+  width: 80%;   /* Adjust width as needed */
+  height: auto;
+  max-width: 1200px;  /* Max width to prevent it from getting too big */
+  max-height: 90vh;   /* Max height to ensure it's not too tall */
+   /* White border around the wrapper */
+  padding: 20px;  /* Padding inside the wrapper */
+  box-sizing: border-box;
+  overflow: hidden;  /* Ensure nothing goes outside the wrapper */
+  border-radius: 10px;  /* Optional: Rounded corners */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  /* Center content inside the wrapper */
+}
+
+/* Ensure the content inside the monster div is properly centered */
+.monster {
+  padding: 15px;
+  display: flex;       /* Enable flexbox */
+  flex-direction: column;
+  justify-content: center;  /* Center items vertically */
+  align-items: center;  /* Center items horizontally */
+  width: 100%;
+  height: auto;
+}
+
+/* Adjust the eye container to avoid overflow */
+.eye-container {
+  width: 100%;
+  max-width: 600px;  /* Limit the width */
+  height: 600px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 40px;
+  justify-content: center; /* Ensure it's centered inside */
+}
+
+.mouth-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 1px;
+  margin: 4px;
+  opacity: 1;
+  justify-content: center; 
+  padding-bottom:3%; /* Ensure it's centered */
+}
+
+/* Ensure the open mouth is properly sized */
+.open {
+  height: 285px;
+  width: 300px;
+  background-color: #140a05;
+  border-radius: 45%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  opacity: 1;
+  animation-duration: .35s;
+  animation-iteration-count: initial;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  filter: drop-shadow(0px 4px 6px rgba(14, 15, 53, 0.7));
+}
+
+.menu {
+  width: 100vw; 
+  height: 100vh;
+  position:absolute;
+  display:flex;
+  align-items:center;
+  left:7.5%;
+}
+
+#container {
+  display: flex;
+  justify-content:center;
+align-items: center;
+position: absolute; /* Allows movement within .menu */
+top: 40%; 
+transform: translate(-50%, -50%); 
+flex-direction:column;
+text-align: center; 
+left:1.5%;
+ /* Start position is off the screen */
+
+}
+
+.boxy {
+animation: fadeIn 1s ease-out forwards;
+opacity:0;
+transform: translateY(20%);
+display: flex;
+gap:15px;
+flex-direction:column;
+}
+
+/* Style for each card */
+.card {
+ /* Fixed size */
+width:125px;
+height:125px;
+
+}
+
+
+.boxy:nth-child(1) {
+  animation-delay: .15s;
+}
+.boxy:nth-child(2) {
+  animation-delay: .25s;
+}
+.boxy:nth-child(3) {
+  animation-delay: .35s;
+}
+.boxy:nth-child(4) {
+  animation-delay: .45s;
+}
+.boxy:nth-child(5) {
+  animation-delay: .55s;
+}
+
+
+/* Animation for fade-in */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+
+  }
+
+}
+
+.container.hidden .boxy {
+  transform: translateY(20%);
+  opacity: 0;
+}
+
+
+#card1 p {
+ text-align: center;
+
+}
+
+
+
+.card p {
+  opacity: 0; /* Hidden by default */
+  position: relative; /* Allows it to move */
+  pointer-events: none; /* So it doesn't interfere with mouse events */
+  background: rgba(252, 244, 207);
+padding: 2px 0px 7px 0px;
+border-radius: 15px;
+  font-size: 12px;
+  transition: opacity 0.2s ease-in-out;
+  text-align: center;
+top:75px;
+font-family: 'PF Videotext Regular';
+}
+
+.card:hover p {
+  opacity: 1; /* Show on hover */
+}
+
+
+
+#card3 {
+  display: flex;
+  justify-content: center; /* Centers the text horizontally */
+  align-items: center; /* Centers the text vertically */
+  text-align: center; /* Ensures the text inside is centered */
+
+}
+
+#card3 p {
+  white-space: nowrap; /* Prevents line breaks */
+  display: flex; /* Allows proper centering */
+  justify-content: center;
+  align-items: center;
+  background:  rgba(252, 244, 207);/* Background stays behind text */
+  padding: 2px 15px 7px 15px; /* Adds spacing */
+  border-radius: 17px; /* Optional: Rounded corners */
+  font-size: 12px;
+  top:37px;
+  margin:auto 0;
+}
+
+
+#card2 {
+  display: flex;
+  justify-content: center; /* Centers the text horizontally */
+  align-items: center; /* Centers the text vertically */
+  text-align: center; /* Ensures the text inside is centered */
+
+}
+
+#card2 p {
+  white-space: nowrap; /* Prevents line breaks */
+  display: flex; /* Allows proper centering */
+  justify-content: center;
+  align-items: center;
+  background: rgba(252, 244, 207); /* Background stays behind text */
+  padding: 2px 15px 7px 15px; /* Adds spacing */
+  border-radius: 17px; /* Optional: Rounded corners */
+  font-size: 12px;
+  top:37px;
+}
+
+
+#hiddenContent {
+  display: none;
+}
+
+/* Stagger the animation delay for each card */
+
+#revealButton {
+  position: absolute;
+ /* Moves the container 50px down */
+bottom:-10.5%;
+  height: 220px;
+width: 220px;
+  transform: translate(-50%, -50%); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none; /* Removes default border */
+  cursor: pointer; /* Ensures it still behaves like a button */
+  outline: none; /* Removes focus outline */
+  display: block;
+  background-color: transparent;
+ transition: 0.2s ease-in-out;
+ display: block;
+ opacity:1;
+}
+
+
+
+
+.connect {
+  position:absolute;
+  top:4.2%;
+}
+
+#hover_text {
+ position:absolute;
+  opacity:0;
+  left:140.2%;
+
+right:0;
+transition: opacity 0.3s ease-in-out;
+transform: translateX(-50%) rotate(0deg);
+
+}
+
+
+#speech  {
+width:550px;
+height:550px;
+scale:(1,1);
+filter:drop-shadow(0 0 0.55rem  rgba(14, 15, 53, 0.6));
+}
+
+
+
+.buttonGroup {
+  display:flex;
+  align-items:center;
+}
+
+
+
+#moon{
+  margin: auto;
+  position: relative;;
+  right: 0;
+  bottom: 350px;
+top:350px;
+left:-620px;
+  width: 300px;
+  height: 300px;
+background-color:transparent;
+  border-radius: 100%;
+  z-index: 999;
+}
+
+
+
+/* Adjust the horn positioning */
+.horn-left {
+  position: absolute;
+  top: 10%;
+  left: 22%;
+  z-index: 2;
+  transform: rotate(-15deg);
+  filter: drop-shadow(-8px 8px 8px rgba(14, 15, 53, 0.8));
+}
+
+.horn-left img {
+  width: 145px;
+  height: auto;
+}
+
+.horn-right {
+  position: absolute;
+  top: 10%;
+  right: 22%;
+  z-index: 2;
+  transform: rotate(15deg);
+  filter: drop-shadow(8px 8px 8px rgba(14, 15, 53, 0.8));
+}
+
+.horn-right img {
+  width: 145px;
+  height: auto;
+}
+
+/* Overlay and other styles remain unchanged */
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  cursor: pointer;
+  transform: translateY(0);
+  transition: transform 0.5s ease-out;
+}
+
+#overlay.hidden {
+  transform: translateY(-100%);
+}
+
+#overlay-content {
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+

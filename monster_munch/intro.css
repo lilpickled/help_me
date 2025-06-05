@@ -1,0 +1,51 @@
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  background-image: url('./images/monster\ munch_outerGlow-01.png');
+    background-size: cover; /* Ensures the image covers the entire overlay */
+    background-position: center center; /* Centers the image */
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    z-index: 9999; 
+    transform: translateY(0); /* Start with the overlay in place */
+    transition: transform 0.5s ease-out; /* Animate the transform */
+}
+
+#overlay.hidden {
+    transform: translateY(-100%); /* Move the overlay out of view */
+}
+
+
+#closeOverlay {
+  width:280px;
+  height:280px;
+  position: relative;
+  bottom:-280px;
+  background-color:transparent;
+  transition: 0.2s ease-in;
+  filter:drop-shadow(0px 0 0.15rem rgba(	194,	191,	224, 0.5));
+}
+
+#closeOverlay:hover {
+  width:310px;
+  height:310px;
+  position: relative;
+  bottom:-275px;
+  background-color:transparent;
+  filter:drop-shadow(0 0 0.45rem #aba6c9);
+}
+
+
+
+#overlay-content {
+  background-color:transparent;
+}
+
+
+
