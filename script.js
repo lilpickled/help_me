@@ -225,24 +225,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Handle revealButton click event
 revealButton.addEventListener('click', () => {
-  if (hiddenContent.style.display === 'none') {
-   hiddenContent.classList.add('show');
+  if (!hiddenContent.classList.contains('show')) {
+    hiddenContent.classList.add('show');
     revealButton.style.backgroundImage = "url('./images/fridge closed1.svg')";
     hoverText.style.opacity = "0";
-    hoverText.dataset.disabled = "true"; // Prevent hoverText from being animated again
-   // FULL RESET
-   hoverText.style.opacity = "0";                // Immediately hide hoverText
-   hoverText.dataset.disabled = "true";           // Set disabled
-   openMouth.classList.remove("shrinking");       // Remove shrinking animation class
-   openMouth.style.animation = "none";            // Kill any animation
-   void openMouth.offsetWidth;                    // Force reflow
-   openMouth.style.animation = null;              // Reset animation property cleanly
-
+    hoverText.dataset.disabled = "true";
+    openMouth.classList.remove("shrinking");
+    openMouth.style.animation = "none";
+    void openMouth.offsetWidth;
+    openMouth.style.animation = null;
   } else {
-    hiddenContent.style.display = 'none';
+    hiddenContent.classList.remove('show');
     revealButton.style.backgroundImage = "url('./images/fridge open 1.svg')";
     hoverText.style.opacity = "0";
-    hoverText.dataset.disabled = "false"; // Enable hoverText animation again if needed
+    hoverText.dataset.disabled = "false";
   }
 });
 
