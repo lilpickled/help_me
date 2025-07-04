@@ -226,7 +226,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // Handle revealButton click event
 revealButton.addEventListener('click', () => {
   if (hiddenContent.style.display === 'none') {
-    hiddenContent.style.display = 'block';
+   hiddenContent.classList.add('show');
     revealButton.style.backgroundImage = "url('./images/fridge closed1.svg')";
     hoverText.style.opacity = "0";
     hoverText.dataset.disabled = "true"; // Prevent hoverText from being animated again
