@@ -3,10 +3,13 @@
 body {
   margin:0;
   overflow: hidden;
-  font-family: 'PF Videotext Regular';
+  font-family: 'PF Videotext Pro', sans-serif;;
 }
 
-
+@font-face {
+  font-family: 'PF Videotext Pro';
+  src: url('./fonts/PF\ Videotext\ Pro\ Regular.ttf') format('truetype');
+}
   .open{
     height: 285px;
   width: 300px;
@@ -365,7 +368,7 @@ border-radius: 15px;
   transition: opacity 0.2s ease-in-out;
   text-align: center;
 top:75px;
-font-family: 'PF Videotext Regular';
+font-family: 'PF Videotext Pro';
 }
 
 .card:hover p {
