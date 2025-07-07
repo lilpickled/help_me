@@ -1,8 +1,23 @@
 <head>
-  <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="intro.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+  <!-- Preload critical images -->
+  <link rel="preload" href="./images/fridge_open_1.svg" as="image" />
+  <link rel="preload" href="./images/fridge_closed.svg" as="image" />
+  <link rel="preload" href="./images/hand3-01.svg" as="image" />
+  <link rel="preload" href="./images/foot4-01.svg" as="image" />
+  <link rel="preload" href="./images/monster button.svg" as="image" />
+  <link rel="preload" href="./images/monster munch_outerGlow-01.png" as="image" />
+  
+  <!-- Preload CSS before linking -->
+  <link rel="preload" href="style.css" as="style" />
+  <link rel="preload" href="intro.css" as="style" />
+
+  <!-- Then load CSS normally -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="intro.css" />
 </head>
 
 

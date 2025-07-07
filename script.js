@@ -171,7 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const revealButton = document.getElementById('revealButton');
   const card25 = document.querySelector('p');
   const openMouth = document.querySelector(".open");
-  document.getElementById("revealButton").style.backgroundImage = "url('./images/fridge open 1.svg')";
+  document.getElementById("revealButton").style.backgroundImage = "url('./images/fridge_open_1.svg')";
   hoverText.style.transform = 'scale(1,1)';
 
   // Set transition for smooth opacity change
@@ -232,7 +232,7 @@ document.addEventListener("DOMContentLoaded", () => {
 revealButton.addEventListener('click', () => {
   if (hiddenContent.style.display === 'none') {
     hiddenContent.style.display = 'block';
-    revealButton.style.backgroundImage = "url('./images/fridge closed1.svg')";
+    revealButton.style.backgroundImage = "url('./images/fridge_closed1.svg')";
     hoverText.style.opacity = "0";
     hoverText.dataset.disabled = "true"; // Prevent hoverText from being animated again
    // FULL RESET
@@ -245,7 +245,7 @@ revealButton.addEventListener('click', () => {
 
   } else {
     hiddenContent.style.display = 'none';
-    revealButton.style.backgroundImage = "url('./images/fridge open 1.svg')";
+    revealButton.style.backgroundImage = "url('./images/fridge_open_1.svg')";
     hoverText.style.opacity = "0";
     hoverText.dataset.disabled = "false"; // Enable hoverText animation again if needed
   }
