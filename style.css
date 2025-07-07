@@ -277,33 +277,36 @@ body {
 }
 
 .menu {
-  width: 100vw; 
-  height: 100vh;
-  position:absolute;
-  display:flex;
-  align-items:center;
-  left:7.5%;
+
+  width: 300px;      /* Fix width to what fridge and cards need */
+  height: 100vh;     /* Fix height to fit fridge + cards */
+  margin-left: 1.5%; 
+    position: fixed;   /* fixed to viewport */
+  bottom: 20px;      /* 20px from bottom */
+  left: 20px;   /* To align left near bottom corner if needed */
+}
+
+#revealButton {
+  position: absolute;
+  bottom: 10px;  /* 10px from bottom of .menu */
+  left: 10px;    /* 10px from left */
+  width: 200px;
+  height: 200px;
+  background: url('./images/fridge_closed.svg') no-repeat center;
+  background-size: contain;
+  cursor: pointer;
+  z-index: 10;
 }
 
 #container {
+  position: absolute;
+  top: 120px;   /* place it below fridge button */
+  left: 10px;
+  width: 280px; /* slightly less than .menu width */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  position: absolute;
-  top: 40%;
-  left: 1.5%;
-  transform: translate(-50%, -50%) scale(1);
-  transform-origin: top left;
-  transition: transform 0.3s ease, padding 0.3s ease;
-  width: auto;
-  padding-top: 0;  /* default no extra padding */
-}
-
-@media (max-width: 767px) {
-  #container {
-    transform: translate(-50%, -50%) scale(0.75);
-    padding-top: 40px; /* adds space pushing cards down */
-  }
+  gap: 10px;
+  height: 100vh;
 }
 
 .boxy {
@@ -426,53 +429,33 @@ font-family: 'PF Videotext Pro';
   top:37px;
 }
 
-@media (max-width: 767px) {
-  .card {
-    flex: 1 1 100%;
-    width: 100%; /* full container width */
-  }
-  #container {
-    width: 90vw; /* container narrows on small screens */
-  }
-}
 
 #hiddenContent {
-  display: none;
+  /* remove display:none */
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-/* Stagger the animation delay for each card */
-
-#revealButton {
-  position: absolute;
- /* Moves the container 50px down */
-bottom:-10%;
-  height: 220px;
-width: 220px;
-  transform: translate(-50%, -50%); 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border: none; /* Removes default border */
-  cursor: pointer; /* Ensures it still behaves like a button */
-  outline: none; /* Removes focus outline */
-  display: block;
-  background-color: transparent;
- transition: 0.2s ease-in-out;
- display: block;
- opacity:1;
-  z-index: 10;
+#hiddenContent.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
+@media (max-width: 480px) {
+  #hiddenContent {
+    width: 95vw;
+    max-width: none;   /* Let it stretch more */
+    transform: translateY(10px); /* smaller slide */
+  }
 
-@media (max-width: 767px) {
-  #revealButton {
-    bottom: 5%;   /* moves it up from off-screen */
-    left: 5%;     /* maybe move it a bit more left */
-    height: 160px; /* smaller size */
-    width: 160px;
+  .card {
+    width: 80px;
+    height: 80px;
   }
 }
-
 
 .connect {
   position:absolute;

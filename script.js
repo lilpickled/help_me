@@ -228,26 +228,26 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-// Handle revealButton click event
 revealButton.addEventListener('click', () => {
-  if (hiddenContent.style.display === 'none') {
-    hiddenContent.style.display = 'block';
+  const isVisible = hiddenContent.classList.contains('show');
+
+  if (!isVisible) {
+    hiddenContent.classList.add('show');  // Show with animation
     revealButton.style.backgroundImage = "url('./images/fridge_closed1.svg')";
     hoverText.style.opacity = "0";
-    hoverText.dataset.disabled = "true"; // Prevent hoverText from being animated again
-   // FULL RESET
-   hoverText.style.opacity = "0";                // Immediately hide hoverText
-   hoverText.dataset.disabled = "true";           // Set disabled
-   openMouth.classList.remove("shrinking");       // Remove shrinking animation class
-   openMouth.style.animation = "none";            // Kill any animation
-   void openMouth.offsetWidth;                    // Force reflow
-   openMouth.style.animation = null;              // Reset animation property cleanly
+    hoverText.dataset.disabled = "true";
+
+    // FULL RESET
+    openMouth.classList.remove("shrinking");
+    openMouth.style.animation = "none";
+    void openMouth.offsetWidth;  // Force reflow
+    openMouth.style.animation = null;
 
   } else {
-    hiddenContent.style.display = 'none';
+    hiddenContent.classList.remove('show');  // Hide with animation
     revealButton.style.backgroundImage = "url('./images/fridge_open_1.svg')";
     hoverText.style.opacity = "0";
-    hoverText.dataset.disabled = "false"; // Enable hoverText animation again if needed
+    hoverText.dataset.disabled = "false";
   }
 });
 
