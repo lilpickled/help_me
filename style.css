@@ -277,36 +277,26 @@ body {
 }
 
 .menu {
-
-  width: 300px;      /* Fix width to what fridge and cards need */
-  height: 100vh;     /* Fix height to fit fridge + cards */
-  margin-left: 1.5%; 
-    position: fixed;   /* fixed to viewport */
-  bottom: 20px;      /* 20px from bottom */
-  left: 20px;   /* To align left near bottom corner if needed */
-}
-
-#revealButton {
-  position: absolute;
-  bottom: 10px;  /* 10px from bottom of .menu */
-  left: 10px;    /* 10px from left */
-  width: 200px;
-  height: 200px;
-  background: url('./images/fridge_closed.svg') no-repeat center;
-  background-size: contain;
-  cursor: pointer;
-  z-index: 10;
+  width: 100vw; 
+  height: 100vh;
+  position:absolute;
+  display:flex;
+  align-items:center;
+  left:7.5%;
 }
 
 #container {
-  position: absolute;
-  top: 120px;   /* place it below fridge button */
-  left: 10px;
-  width: 280px; /* slightly less than .menu width */
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  height: 100vh;
+  justify-content:center;
+align-items: center;
+position: absolute; /* Allows movement within .menu */
+top: 40%; 
+transform: translate(-50%, -50%); 
+flex-direction:column;
+text-align: center; 
+left:1.5%;
+ /* Start position is off the screen */
+
 }
 
 .boxy {
@@ -431,31 +421,34 @@ font-family: 'PF Videotext Pro';
 
 
 #hiddenContent {
-  /* remove display:none */
-  opacity: 0;
-  transform: translateY(20px);
-  pointer-events: none;
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  display: none;
 }
 
-#hiddenContent.show {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
+/* Stagger the animation delay for each card */
+
+#revealButton {
+  position: absolute;
+ /* Moves the container 50px down */
+bottom:-10%;
+  height: 220px;
+width: 220px;
+  transform: translate(-50%, -50%); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none; /* Removes default border */
+  cursor: pointer; /* Ensures it still behaves like a button */
+  outline: none; /* Removes focus outline */
+  display: block;
+  background-color: transparent;
+ transition: 0.2s ease-in-out;
+ display: block;
+ opacity:1;
+  z-index: 10;
 }
 
-@media (max-width: 480px) {
-  #hiddenContent {
-    width: 95vw;
-    max-width: none;   /* Let it stretch more */
-    transform: translateY(10px); /* smaller slide */
-  }
 
-  .card {
-    width: 80px;
-    height: 80px;
-  }
-}
+
 
 .connect {
   position:absolute;
@@ -486,6 +479,37 @@ filter:drop-shadow(0 0 0.55rem  rgba(14, 15, 53, 0.6));
 .buttonGroup {
   display:flex;
   align-items:center;
+}
+
+
+#hiddenWrapper {
+  max-width: 90vw;
+  max-height: 80vh;
+  overflow: auto; /* scroll if needed */
+  margin: 0 auto; /* center horizontally */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#hiddenContent, #container {
+  transform-origin: top left;
+  transition: transform 0.3s ease;
+  width: 300px; /* your normal width */
+  height: 285px; /* your normal height */
+  position: relative; /* NOT absolute */
+}
+
+/* On smaller screens scale down */
+@media (max-width: 768px) {
+  #hiddenContent, #container {
+    transform: scale(0.7);
+  }
+}
+
+@media (max-width: 480px) {
+  #hiddenContent, #container {
+    transform: scale(0.5);
+  }
 }
 
 
