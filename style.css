@@ -483,23 +483,7 @@ filter:drop-shadow(0 0 0.55rem  rgba(14, 15, 53, 0.6));
 
 
 
-#moon{
-  margin: auto;
-  position: relative;;
-  right: 0;
-  bottom: 350px;
-top:350px;
-left:-620px;
-  width: 300px;
-  height: 300px;
-background-color:transparent;
-  border-radius: 100%;
-  
-}
 
-
-
-/* Adjust the horn positioning */
 .horn-left {
   position: absolute;
   top: 10%;
