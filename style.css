@@ -287,16 +287,23 @@ body {
 
 #container {
   display: flex;
-  justify-content:center;
-align-items: center;
-position: absolute; /* Allows movement within .menu */
-top: 40%; 
-transform: translate(-50%, -50%); 
-flex-direction:column;
-text-align: center; 
-left:1.5%;
- /* Start position is off the screen */
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 40%;
+  left: 1.5%;
+  transform: translate(-50%, -50%) scale(1);
+  transform-origin: top left;
+  transition: transform 0.3s ease, padding 0.3s ease;
+  width: auto;
+  padding-top: 0;  /* default no extra padding */
+}
 
+@media (max-width: 767px) {
+  #container {
+    transform: translate(-50%, -50%) scale(0.75);
+    padding-top: 40px; /* adds space pushing cards down */
+  }
 }
 
 .boxy {
@@ -419,6 +426,15 @@ font-family: 'PF Videotext Pro';
   top:37px;
 }
 
+@media (max-width: 767px) {
+  .card {
+    flex: 1 1 100%;
+    width: 100%; /* full container width */
+  }
+  #container {
+    width: 90vw; /* container narrows on small screens */
+  }
+}
 
 #hiddenContent {
   display: none;
@@ -448,6 +464,14 @@ width: 220px;
 }
 
 
+@media (max-width: 767px) {
+  #revealButton {
+    bottom: 5%;   /* moves it up from off-screen */
+    left: 5%;     /* maybe move it a bit more left */
+    height: 160px; /* smaller size */
+    width: 160px;
+  }
+}
 
 
 .connect {
@@ -484,6 +508,7 @@ filter:drop-shadow(0 0 0.55rem  rgba(14, 15, 53, 0.6));
 
 
 
+/* Adjust the horn positioning */
 .horn-left {
   position: absolute;
   top: 10%;
