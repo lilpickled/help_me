@@ -429,7 +429,7 @@ font-family: 'PF Videotext Pro';
 #revealButton {
   position: absolute;
  /* Moves the container 50px down */
-bottom:-10.5%;
+bottom:-10%;
   height: 220px;
 width: 220px;
   transform: translate(-50%, -50%); 
@@ -444,6 +444,7 @@ width: 220px;
  transition: 0.2s ease-in-out;
  display: block;
  opacity:1;
+  z-index: 10;
 }
 
 
