@@ -18,7 +18,8 @@
 }
 
 #overlay.hidden {
-    transform: translateY(-100%); /* Move the overlay out of view */
+  transform: translateY(-100%);
+  pointer-events: none; /* make sure clicks go through */
 }
 
 

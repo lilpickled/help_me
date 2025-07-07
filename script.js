@@ -150,11 +150,16 @@ document.addEventListener('DOMContentLoaded', function() {
   const overlay = document.getElementById('overlay');
   
 
-  closeButton.addEventListener('click', function() {
-      overlay.classList.add('hidden'); // Hide overlay
+ 
+     closeButton.addEventListener('click', function() {
+  overlay.classList.add('hidden');
+  setTimeout(() => {
+    overlay.style.display = 'none';
+  }, 500); // match your transition duration
+}); // Hide overlay
 
 });
-});
+
 // Toggle visibility of the hidden content
 
 

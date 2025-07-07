@@ -544,9 +544,7 @@ background-color:transparent;
   transition: transform 0.5s ease-out;
 }
 
-#overlay.hidden {
-  transform: translateY(-100%);
-}
+
 
 #overlay-content {
   text-align: center;
