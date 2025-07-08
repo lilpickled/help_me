@@ -322,12 +322,15 @@ display: flex;
   opacity: 0;
   transform: translateY(20%);
    z-index:10;
-  margin-top: 20%;
+margin-top: clamp(40px, 10vh, 20%);
+   max-height: 85vh;
+  overflow-y: auto;           /* vertical scroll if tall */
+  overflow-x: auto;   
 }
 
 #revealButton {
-  width: clamp(200px, 12vw, 220px);
-  height: clamp(200px, 12vw, 220px);
+  width: clamp(190px, 12vw, 220px);
+  height: clamp(190px, 12vw, 220px);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
