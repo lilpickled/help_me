@@ -275,11 +275,6 @@ body {
 }
 
 
-#container {
-display: flex;
-/* Allows movement within .menu */
-}
-
 
 #hiddenContent {
   display: none;
@@ -339,13 +334,16 @@ bottom:0;
 
 
 .card {
-  width: clamp(100px, 10vw, 120px);
-height:auto;
+max-width:120px;
+max-height: 125px;
+min-width: 90px;
+  min-height:90px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1080px) {
   .card {
     width: 90px;
+    height:90px;
   }
 }
 
