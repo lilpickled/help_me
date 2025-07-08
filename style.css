@@ -323,9 +323,8 @@ display: flex;
   transform: translateY(20%);
    z-index:10;
 margin-top: clamp(40px, 10vh, 20%);
-   max-height: 85vh;
-  overflow-y: auto;           /* vertical scroll if tall */
-  overflow-x: auto;   
+   max-height: 80vh;
+ 
 }
 
 #revealButton {
