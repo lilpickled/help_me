@@ -338,14 +338,9 @@ bottom:0;
 height:clamp(100px, 10vh, 125px);
 }
 
-@media (max-width: 1920px) {
-  .card {
-    width: 90px;
-    height:90px;
-  }
-}
 
-@media (max-width: 1080px) {
+
+@media (max-height: 780px) {
   .card {
     width: 90px;
     height:90px;
