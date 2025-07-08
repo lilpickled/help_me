@@ -292,7 +292,6 @@ display: flex;
   left: 0;
   width: 35vw;  /* Or a fixed width like 300px */
   height: 100vh;
-
   box-sizing: border-box;
 
   display: flex;           /* Enable flex layout */
@@ -323,7 +322,7 @@ display: flex;
   transform: translateY(20%);
    z-index:10;
 margin-top: 10%;
-   max-height: 80vh;
+
  
 }
 
@@ -345,7 +344,7 @@ bottom:0;
 
 .card {
   width: clamp(100px, 12vw, 118px);
-  height: clamp(100px, 12vw, 118px);
+height:auto;
   margin: 0 auto;
 }
 
