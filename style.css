@@ -338,14 +338,14 @@ bottom:0;
 
 
 .card {
-  width: clamp(100px, 10vw, 120px);
-height:auto;
+  width: clamp(100px, 10vw, 125px);
+height: clamp(100px, 10vh, 125px);
 }
 
 @media (max-width: 1080px) {
   .card {
-    width: 100px;
-    height:100px;
+    width: 90px;
+   
   }
 }
 
