@@ -1,4 +1,4 @@
-ody {
+body {
   margin:0;
   overflow: hidden;
   font-family: 'PF Videotext Pro', sans-serif;;
@@ -306,7 +306,7 @@ display: flex;
   display: flex;
   flex-direction: column;
   justify-content: space-between; 
-  height: 100vh;       /* fill full height of .menu */
+      /* fill full height of .menu */
   max-width: 400px;   /* optional */
   margin: 0 auto;     /* center horizontally */
   width: 100%;   
@@ -322,7 +322,7 @@ display: flex;
   opacity: 0;
   transform: translateY(20%);
    z-index:10;
-margin-top: clamp(40px, 10vh, 20%);
+margin-top: 10%;
    max-height: 80vh;
  
 }
