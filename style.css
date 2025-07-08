@@ -303,8 +303,6 @@ display: flex;
   display: flex;
   flex-direction: column;
   justify-content: space-between; 
-      /* fill full height of .menu */
-     /* optional */
   margin: 0 auto;     /* center horizontally */
   width: 100%;   
      /* full width inside menu */
