@@ -342,9 +342,10 @@ bottom:0;
 height:auto;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1080px) {
   .card {
-    width: 90px;
+    width: 100px;
+    height:100px;
   }
 }
 
