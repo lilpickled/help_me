@@ -349,6 +349,14 @@ bottom:0;
   margin: 0 auto;
 }
 
+@media (max-width: 800px) {
+  .card {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+
 .boxy:nth-child(1) {
   animation-delay: .15s;
 }
