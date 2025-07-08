@@ -211,7 +211,7 @@ body {
   width: 80%;   /* Adjust width as needed */
   height: auto;
   max-width: 1200px;  /* Max width to prevent it from getting too big */
-  max-height: 90vh;   /* Max height to ensure it's not too tall */
+  max-height: 100vh;   /* Max height to ensure it's not too tall */
    /* White border around the wrapper */
   padding: 20px;  /* Padding inside the wrapper */
   box-sizing: border-box;
