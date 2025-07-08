@@ -1,6 +1,4 @@
-
-
-body {
+ody {
   margin:0;
   overflow: hidden;
   font-family: 'PF Videotext Pro', sans-serif;;
@@ -292,27 +290,27 @@ display: flex;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 35vw;  /* Or a fixed width like 300px */
   height: 100vh;
-  padding: 20px;
+
   box-sizing: border-box;
 
-  /* Remove flex from here, or keep if you want for other children */
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* justify-content: center; */
-  /* align-items: center; */
+  display: flex;           /* Enable flex layout */
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: flex-start; 
+    bottom:0;
 }
 
 .menu-inner {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* push button to bottom */
-  align-items: center;
-  height: 100%;       /* fill full height of .menu */
+  justify-content: space-between; 
+  height: 100vh;       /* fill full height of .menu */
   max-width: 400px;   /* optional */
   margin: 0 auto;     /* center horizontally */
-  width: 100%;        /* full width inside menu */
+  width: 100%;   
+     /* full width inside menu */
 }
 
 .boxy {
@@ -320,12 +318,11 @@ display: flex;
   display: flex;
   flex-direction: column;
   gap: 15px;
-  width: 100%;
   animation: fadeIn 1s ease-out forwards;
   opacity: 0;
   transform: translateY(20%);
-  overflow-y: auto;      /* scroll if content too tall */
-  padding: 20px;
+   z-index:10;
+  margin-top: 20%;
 }
 
 #revealButton {
@@ -339,13 +336,14 @@ display: flex;
   outline: none;
   background-color: transparent;
   transition: 0.2s ease-in-out;
-  margin-top: 10px; /* small spacing above button */
+position:absolute;
+bottom:0;
 }
-/* Style for each card */
+
 
 .card {
-  width: clamp(100px, 12vw, 125px);
-  height: clamp(100px, 12vw, 125px);
+  width: clamp(100px, 12vw, 118px);
+  height: clamp(100px, 12vw, 118px);
   margin: 0 auto;
 }
 
@@ -544,5 +542,3 @@ filter:drop-shadow(0 0 0.55rem  rgba(14, 15, 53, 0.6));
   padding: 30px;
   border-radius: 10px;
 }
-
-
