@@ -290,8 +290,8 @@ body {
   display: flex;           /* Enable flex layout */
   flex-direction: column;
   justify-content: center; /* Center vertically */
-  align-items: flex-start; 
-    bottom:0;
+  align-items: stretch; 
+  
 }
 
 .menu-inner {
