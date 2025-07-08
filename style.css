@@ -338,6 +338,13 @@ bottom:0;
 height:auto;
 }
 
+@media (max-width: 1920px) {
+  .card {
+    width: 90px;
+    height:90px;
+  }
+}
+
 @media (max-width: 1080px) {
   .card {
     width: 90px;
