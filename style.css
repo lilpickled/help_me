@@ -340,7 +340,6 @@ bottom:0;
 .card {
   width: clamp(100px, 10vw, 120px);
 height:auto;
-  margin:
 }
 
 @media (max-width: 800px) {
