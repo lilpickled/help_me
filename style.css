@@ -337,17 +337,18 @@ bottom:0;
 }
 
 
+
 .card {
-  width: clamp(100px, 10vw, 125px);
-height: clamp(100px, 10vh, 125px);
+  width: clamp(100px, 10vw, 120px);
+height:auto;
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 800px) {
   .card {
     width: 90px;
-   
   }
 }
+
 
 
 .boxy:nth-child(1) {
