@@ -312,7 +312,7 @@ body {
   opacity: 0;
   transform: translateY(20%);
 margin-top: 10%;
-align-items: stretch;
+
  z-index:10;
    position: relative; 
    padding-top:30%;
@@ -321,8 +321,8 @@ align-items: stretch;
 }
 
 #revealButton {
-  width: clamp(190px, 12vw, 220px);
-  height: clamp(190px, 12vw, 220px);
+  width: clamp(175px, 12vw, 220px);
+  height: clamp(175px, 12vw, 220px);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -342,7 +342,7 @@ padding-left:5%;
 .card {
     width: 120px;
     height:120px;
-    z-index:15;
+   
 }
 
 @media (max-height: 780px) {
@@ -350,7 +350,17 @@ padding-left:5%;
     width: 90px;
     height:90px;
   }
+
+#revealButton {
+width:175px;
+height:175px;
 }
+}
+
+
+
+
+
 
 
 
