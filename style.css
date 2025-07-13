@@ -275,11 +275,6 @@ body {
 }
 
 
-#container {
-display: flex;
-/* Allows movement within .menu */
-}
-
 
 #hiddenContent {
   display: none;
@@ -295,8 +290,8 @@ display: flex;
   display: flex;           /* Enable flex layout */
   flex-direction: column;
   justify-content: center; /* Center vertically */
-  align-items: flex-start; 
-    bottom:0;
+  align-items: stretch; 
+  
 }
 
 .menu-inner {
@@ -317,8 +312,8 @@ display: flex;
   opacity: 0;
   transform: translateY(20%);
    z-index:10;
-margin-top: 10%;
- 
+margin-top: 15%;
+align-items: stretch 
 }
 
 #revealButton {
@@ -337,16 +332,19 @@ bottom:0;
 }
 
 
+
 .card {
-  width: clamp(100px, 10vw, 120px);
-height:auto;
+    width: 125px;
+    height:125px;
 }
 
-@media (max-width: 800px) {
+@media (max-height: 780px) {
   .card {
     width: 90px;
+    height:90px;
   }
 }
+
 
 
 .boxy:nth-child(1) {
