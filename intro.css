@@ -38,21 +38,36 @@ body {
   background-color:transparent;
   transition: 0.2s ease-in;
   filter:drop-shadow(0px 0 0.15rem rgba(	194,	191,	224, 0.5));
-  
+  padding-bottom: 1.5%;
+
 }
 
 #closeOverlay:hover {
-  width:310px;
-  height:310px;
+  width:300px;
+  height:300px;
   position: absolute;
   bottom:0%;
   left: 50%;
   transform: translateX(-50%);
   background-color:transparent;
   filter:drop-shadow(0 0 0.45rem #aba6c9);
+ padding-bottom: 1.5%;
 
 }
 
+
+
+
+@media (max-width: 1480px) {
+#closeOverlay {
+  width:250px;
+height:250px; }
+
+#closeOverlay:hover {
+  width:280px;
+  height:280px;
+}
+}
 
 
 #overlay-content {

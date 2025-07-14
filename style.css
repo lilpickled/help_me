@@ -232,6 +232,7 @@ body {
   align-items: center;  /* Center items horizontally */
   width: 100%;
   height: auto;
+  position:absolute;
 }
 
 /* Adjust the eye container to avoid overflow */
@@ -503,29 +504,27 @@ font-family: 'PF Videotext Pro';
 
 
 
-
-.connect {
-  position:absolute;
-  top:4.2%;
+.speech_container {
+  position: relative;
 }
 
 #hover_text {
- position:absolute;
-  opacity:0;
-  left:140.2%;
-
-right:0;
-transition: opacity 0.3s ease-in-out;
-transform: translateX(-50%) rotate(0deg);
-
+  position: absolute;
+  top: 45%;  /* move up/down */
+  left: 58%;   /* center horizontally */
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
-
 #speech  {
-width:550px;
-height:550px;
+width:490px;
+height:490px;
 scale:(1,1);
 filter:drop-shadow(0 0 0.55rem  rgba(14, 15, 53, 0.6));
+ position:relative;
+   left:40%;
+   bottom:-20%;
 }
 
 
@@ -541,7 +540,7 @@ filter:drop-shadow(0 0 0.55rem  rgba(14, 15, 53, 0.6));
 /* Adjust the horn positioning */
 .horn-left {
   position: absolute;
-  top: 10%;
+  top: 1%;
   left: 22%;
   z-index: 2;
   transform: rotate(-15deg);
@@ -555,7 +554,7 @@ filter:drop-shadow(0 0 0.55rem  rgba(14, 15, 53, 0.6));
 
 .horn-right {
   position: absolute;
-  top: 10%;
+  top: 1%;
   right: 22%;
   z-index: 2;
   transform: rotate(15deg);
