@@ -345,6 +345,7 @@ body {
 
 
 #revealButton {
+   background-image: url('./images/fridge_open_1.svg');
     backface-visibility: hidden;
   width: clamp(200px, 12vw, 220px);
   height: clamp(200px, 12vw, 220px);
