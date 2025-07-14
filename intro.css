@@ -58,19 +58,23 @@ body {
 
 
 
-@media (max-width: 1540px) and (max-height: 750px) {
+@media (max-width: 1540px)  {
   #closeOverlay {
     width: 250px;
     height: 250px;
     padding-bottom: 1%;
+     padding-bottom: 3%;
   }
 
   #closeOverlay:hover {
     width: 280px;
     height: 280px;
     padding-bottom: 1%;
+    padding-bottom: 3%;
   }
 }
+
+
 
 #overlay-content {
   background-color:transparent;
