@@ -304,25 +304,50 @@ body {
 }
 
 .boxy {
-  flex-grow: 1;          /* take all available vertical space */
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr; /* Start with 1 column */
   gap: 12px;
+  align-items: center;
+  justify-items: center;
   animation: fadeIn 1s ease-out forwards;
   opacity: 0;
   transform: translateY(20%);
-margin-top: 10%;
-
- z-index:10;
-   position: relative; 
-   padding-top:30%;
-   align-items:center;
-   padding-left:112%;
+  margin-top: 10%;
+  z-index: 10;
+  padding-top: 30%;
+  padding-left: 64%;
+  position: absolute;
+  bottom: 220px; /* Adjust this based on button height */
+  padding-left: 80px;
+  transform: translateX(50%);
 }
 
+/* Responsive layout: switch to 2 columns on smaller screens */
+@media (max-height: 768px) {
+  .boxy {
+        grid-template-columns: repeat(2, 1fr);
+    bottom: 160px; /* Keep it near the bottom */
+ transform: translateX(50%);
+   padding-left: 65px;
+   padding-bottom: 40px;
+  }
+}
+
+@media (max-height: 900px) {
+  .boxy {
+        grid-template-columns: repeat(2, 1fr);
+    bottom: 160px; /* Keep it near the bottom */
+ transform: translateX(50%);
+   padding-left: 65px;
+   padding-bottom: 40px;
+  }
+}
+
+
 #revealButton {
-  width: clamp(175px, 12vw, 220px);
-  height: clamp(175px, 12vw, 220px);
+    backface-visibility: hidden;
+  width: clamp(200px, 12vw, 220px);
+  height: clamp(200px, 12vw, 220px);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -345,20 +370,26 @@ padding-left:5%;
    
 }
 
-@media (max-height: 780px) {
+
+
+
+@media (max-width: 760px) {
   .card {
-    width: 90px;
-    height:90px;
+    width: 100px;
+    height:100px;
   }
 
-#revealButton {
-width:175px;
-height:175px;
-}
 }
 
 
 
+@media (max-height: 760px) {
+  .card {
+    width: 100px;
+    height:100px;
+  }
+
+}
 
 
 
