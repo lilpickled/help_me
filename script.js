@@ -196,15 +196,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   mouthContainer.addEventListener("mouseenter", () => {
-    if (hoverText.dataset.disabled === "true" || animationInProgress) return;
-    if (animationInProgress) return;
+    console.log("mouseenter triggered");
+  console.log("animationInProgress is", animationInProgress);
+  console.log("dataset.disabled is", hoverText.dataset.disabled);
+  if (hoverText.dataset.disabled === "true" || animationInProgress) {
+  console.log("early return – animation blocked");
+  return;
+}
+
        animationInProgress = true;
     openMouth.classList.add("shrinking");
+    console.log(openMouth.classList);
   });
   
   // Animation end listener
   openMouth.addEventListener("animationend", (event) => {
-    
+      console.log("mouseenter triggered"); 
+      console.log(openMouth.classList);
     if (hoverText.dataset.disabled === "true") {
       animationInProgress = false;
       return; // if disabled, DO NOTHING
