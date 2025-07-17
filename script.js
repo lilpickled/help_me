@@ -173,11 +173,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const openMouth = document.querySelector(".open");
   document.getElementById("revealButton").style.backgroundImage = "url('./images/fridge_open_1.svg')";
   hoverText.style.transform = 'scale(1,1)';
+  hoverText.style.transition = "opacity 0.4s ease-out";
 
-  // Set transition for smooth opacity change
-  hoverText.style.transition = "opacity 0.4s ease-out"; // Smooth opacity transition
-
- 
+ const speechOptions = hoverText.querySelectorAll(".speech-option");
 
   
 
@@ -204,11 +202,19 @@ document.addEventListener("DOMContentLoaded", () => {
   return;
 }
 
+ speechOptions.forEach(img => img.style.display = 'none');  //so first have to set it up so it's not visible, so it can be activated later to reveal
+
+const randomImg = speechOptions[Math.floor(Math.random() * speechOptions.length)];
+randomImg.style.display = 'block'; //now establishing it's visible, casuse the speechOptions were made invisible initally
+
+
        animationInProgress = true;
     openMouth.classList.add("shrinking");
     console.log(openMouth.classList);
   });
   
+
+
   // Animation end listener
   openMouth.addEventListener("animationend", (event) => {
       console.log("mouseenter triggered"); 
