@@ -192,7 +192,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return mouseX <= halfWidth && mouseY <= halfHeight;
   }
 
-
+let firstHover = true;
   mouthContainer.addEventListener("mouseenter", () => {
     console.log("mouseenter triggered");
   console.log("animationInProgress is", animationInProgress);
@@ -204,9 +204,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
  speechOptions.forEach(img => img.style.display = 'none');  //so first have to set it up so it's not visible, so it can be activated later to reveal
 
-const randomImg = speechOptions[Math.floor(Math.random() * speechOptions.length)];
-randomImg.style.display = 'block'; //now establishing it's visible, casuse the speechOptions were made invisible initally
-
+let imgToShow;
+if (firstHover) {
+  imgToShow = speechOptions[0];
+  firstHover = false;
+  imgToShow.style.display = 'block';
+}else{
+imgToShow = speechOptions[Math.floor(Math.random() * speechOptions.length)];
+imgToShow.style.display = 'block'; //now establishing it's visible, casuse the speechOptions were made invisible initally
+}
 
        animationInProgress = true;
     openMouth.classList.add("shrinking");
