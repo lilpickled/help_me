@@ -1,4 +1,4 @@
-body {
+animationbody {
   margin:0;
   overflow: hidden;
   font-family: 'PF Videotext Pro', sans-serif;
@@ -444,9 +444,9 @@ padding-left:5%;
   position: relative; /* Allows it to move */
   pointer-events: none; /* So it doesn't interfere with mouse events */
   background: rgba(252, 244, 207);
-padding: 2px 0px 7px 0px;
+padding: 2px 0px 4px 0px;
 border-radius: 15px;
-  font-size: 12px;
+  font-size: 14px;
   transition: opacity 0.2s ease-in-out;
   text-align: center;
 top:75px;
@@ -473,11 +473,12 @@ font-family: 'PF Videotext Pro';
   justify-content: center;
   align-items: center;
   background:  rgba(252, 244, 207);/* Background stays behind text */
-  padding: 2px 15px 7px 15px; /* Adds spacing */
+  padding: 2px 14px 4px 14px; /* Adds spacing */
   border-radius: 17px; /* Optional: Rounded corners */
-  font-size: 12px;
+ font-size: 14px;
   top:37px;
   margin:auto 0;
+  
 }
 
 
@@ -495,9 +496,9 @@ font-family: 'PF Videotext Pro';
   justify-content: center;
   align-items: center;
   background: rgba(252, 244, 207); /* Background stays behind text */
-  padding: 2px 15px 7px 15px; /* Adds spacing */
+  padding: 2px 14px 4px 14px; /* Adds spacing */
   border-radius: 17px; /* Optional: Rounded corners */
-  font-size: 12px;
+ font-size: 14px;
   top:37px;
 }
 
